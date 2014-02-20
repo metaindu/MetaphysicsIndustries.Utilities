@@ -32,8 +32,8 @@ namespace MetaphysicsIndustries.Utilities
     {
         public Vector(float x, float y)
         {
-            _x = x;
-            _y = y;
+            X = x;
+            Y = y;
         }
 
         public static Vector FromPolar(float theta, float length)
@@ -100,10 +100,6 @@ namespace MetaphysicsIndustries.Utilities
         {
             return new Vector(v.X / scale, v.Y / scale);
         }
-        //public Vector operator *(Vector rect, float scale)
-        //{
-        //    return new Vector(scale * rect.X, scale * rect.Y);
-        //}
 
         public static implicit operator PointF(Vector v)
         {
@@ -118,33 +114,15 @@ namespace MetaphysicsIndustries.Utilities
             return this / Length;
         }
 
-        private float _x;
-        private float _y;
-        public float X
-        {
-            get { return _x; }
-
-            //i'm sure that there's a perfectly good reason for 
-            //this accessor being private, but i don't know what
-            //it is 
-            //private set { _x = value; } 
-        }
-        public float Y
-        {
-            get { return _y; }
-
-            //i'm sure that there's a perfectly good reason for 
-            //this accessor being private, but i don't know what
-            //it is 
-            private set { _y = value; }
-        }
+        public readonly float X;
+        public readonly float Y;
 
         public override bool Equals(object obj)
         {
             if (obj is Vector)
             {
                 Vector v = (Vector)obj;
-                return this.X == v.X && this.Y == v.Y;
+                return X == v.X && Y == v.Y;
             }
 
             return base.Equals(obj);

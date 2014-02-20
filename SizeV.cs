@@ -32,38 +32,30 @@ namespace MetaphysicsIndustries.Utilities
     {
         public SizeV(float width, float height)
         {
-            _width = width;
-            _height = height;
+            Width = width;
+            Height = height;
         }
 
         public SizeV(Size size)
         {
-            _width = size.Width;
-            _height = size.Height;
+            Width = size.Width;
+            Height = size.Height;
         }
 
         public SizeV(SizeF size)
         {
-            _width = size.Width;
-            _height = size.Height;
+            Width = size.Width;
+            Height = size.Height;
         }
 
         public SizeV(Vector v)
         {
-            _width = v.X;
-            _height = v.Y;
+            Width = v.X;
+            Height = v.Y;
         }
 
-        private float _width;
-        public float Width
-        {
-            get { return _width; }
-        }
-        private float _height;
-        public float Height
-        {
-            get { return _height; }
-        }
+        public readonly float Width;
+        public readonly float Height;
 
         //op implicit
         public static implicit operator SizeF(SizeV v)
@@ -80,7 +72,7 @@ namespace MetaphysicsIndustries.Utilities
             if (obj is SizeV)
             {
                 SizeV v = (SizeV)obj;
-                return this.Width == v.Width && this.Height == v.Height;
+                return Width == v.Width && Height == v.Height;
             }
 
             return base.Equals(obj);

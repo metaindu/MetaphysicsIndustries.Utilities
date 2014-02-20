@@ -221,7 +221,7 @@ namespace MetaphysicsIndustries.Utilities
             get { return _bitmap.Height; }
         }
 
-        private Color[,] _pixels;
-        private Bitmap _bitmap;
+        private readonly Color[,] _pixels;
+        private readonly Bitmap _bitmap;
     }
 }
