@@ -1,27 +1,36 @@
 
-/*****************************************************************************
- *                                                                           *
- *  MemoryImage.cs                                                           *
- *  26 July 2006                                                             *
- *  Project: MetaphysicsIndustries.Utilities                                 *
- *  Written by: Richard Sartor                                               *
- *  Copyright © 2008 Metaphysics Industries, Inc.                            *
- *                                                                           *
- *  Converted from C++ to C# on 8 February 2008                              *
- *                                                                           *
- *  A managed class that organizes access to a Bitmap object. Taken from the *
- *    MathPaint project.                                                     *
- *                                                                           *
- *****************************************************************************/
+/*
+ *  MetaphysicsIndustries.Utilities
+ *  Copyright (C) 2014 Metaphysics Industries, Inc., Richard Sartor
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * 
+ */
 
 using System;
 using System.Collections.Generic;
-//using MetaphysicsIndustries.Collections;
 using System.Drawing;
 using System.Drawing.Imaging;
 
 namespace MetaphysicsIndustries.Utilities
 {
+    /*
+     * A managed class that organizes access to a Bitmap object.
+     * 
+     */
+
     public class MemoryImage : IDisposable
     {
         public MemoryImage()
